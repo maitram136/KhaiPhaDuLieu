@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ShapeLogicLayer">
+  <ClassDiagramComponents>
+    <Class name="HinhHoc" package="shapelogic" visibility="public" isAbstract="true" xPosition="253.0" yPosition="110.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="tinhChuVi" returnType="double" visibility="public"/>
+        <Method name="tinhDienTic" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HinhTron" package="shapelogic" visibility="public" xPosition="106.0" yPosition="368.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="y" type="int" visibility="private"/>
+        <Field name="r" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="HinhChuNhat" package="shapelogic" visibility="public" xPosition="396.0" yPosition="368.0">
+      <Fields>
+        <Field name="lower_x" type="int" visibility="private"/>
+        <Field name="lower_y" type="int" visibility="private"/>
+        <Field name="upper_x" type="int" visibility="private"/>
+        <Field name="upper_y" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="shapelogic.HinhChuNhat" target="shapelogic.HinhHoc"/>
+    <IsRelation name="is" source="shapelogic.HinhTron" target="shapelogic.HinhHoc"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

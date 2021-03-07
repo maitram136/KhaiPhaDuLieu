@@ -39,12 +39,21 @@ public class testProductArray {
 //                    sp[j] = temp;
 //                }
         //xap sep mang theo gia ca tang dan
-        Arrays.sort(sp, new ProductCompByPrice());
-        System.out.println("Mảng sắp xếp tăng dần theo giá cả ");
-        System.out.println(Arrays.toString(sp));
+//        Arrays.sort(sp, new ProductCompByPrice());
+//        System.out.println("Mảng sắp xếp tăng dần theo giá cả ");
+//        System.out.println(Arrays.toString(sp));
         System.out.println("Sắp xếp sản phẩm theo tên sản phảm ");
         Arrays.sort(sp, new ProductComByName());
         System.out.println(Arrays.toString(sp)); 
+        
+        int index = Arrays.binarySearch(sp, new Product("Sunsilk", 12),
+                new ProductComByName());
+        if(index < 0){
+            System.out.println("Không tìm thấy");
+        }else{
+            System.out.println("Phần tử thứ " + index + " chứa giá trị cần tim");
+            System.out.println(sp[index]);
+        }
     }
     
 }

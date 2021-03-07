@@ -46,6 +46,38 @@ public class testArray {
           }
           System.out.println(Arrays.toString(c));
           
+          //sap xep mang theo chieu tang dan
+          Arrays.sort(c);
+          System.out.println("Mảng sau khi sắp xếp tăng dần là ");
+          System.out.println(Arrays.toString(c));
+          
+          //tim kiem vet can
+          System.out.println("Nhập giá trị cần tìm kiếm x = ");
+          input = sc.nextLine();
+          int x = Integer.parseInt(input);
+//          
+//          boolean flag = false;
+//          
+//          for(int i = 0; i < c.length; i++){
+//              if(c[i] == x){
+//                  System.out.println("Giá trị cần tìm kiếm có trong mảng tại vị trí " + i);
+//                  flag = true;
+//                  break;
+//              }
+//          }
+//          
+//          if(!flag){
+//              System.out.println("Giá trị cần tìm không có trong mảng ");
+//          }           
+            //tim kiem nhi phan
+            int index = Arrays.binarySearch(c, x);
+            if(index < 0){
+                System.out.println("Không tìm thấy");
+            }else {
+                System.out.println("Tìm thấy tại vị trí  thư " + index);
+            }
+            
+          
 //          int temp;
 //          for(int i = 0; i < n-1; i++)
 //              for(int j = i + 1; j < n; j++){
@@ -56,8 +88,8 @@ public class testArray {
 //                  }
 //              }
 //          System.out.println(Arrays.toString(c));
-            Arrays.sort(c);
-            System.out.println(Arrays.toString(c));
+//          Arrays.sort(c);
+//          System.out.println(Arrays.toString(c));
             
 //          for(int i = 0; i < n; i++){
 //          System.out.print("c[" + i + "] = ");
